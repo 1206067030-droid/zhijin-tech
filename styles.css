@@ -1,0 +1,303 @@
+/* 自定义样式 */
+
+/* 字体设置 */
+.font-serif {
+    font-family: 'Noto Serif SC', 'Songti SC', serif;
+}
+
+.font-sans {
+    font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 产品卡片悬停效果 */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+/* 图片懒加载占位符 */
+img {
+    background-color: #f5f5f4;
+}
+
+/* 产品缩略图按钮 */
+.product-thumb-btn {
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.product-thumb-btn.active,
+.product-thumb-btn:hover {
+    border-color: #d97706;
+}
+
+/* 表单输入框聚焦效果 */
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f4;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1c1917;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d6d3d1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #44403c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a29e;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #57534e;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* 延迟动画 */
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+    .product-card img {
+        height: 200px;
+    }
+}
+
+/* 移动端菜单动画 */
+#mobileMenu {
+    transition: all 0.3s ease;
+}
+
+/* 导航链接激活状态 */
+.nav-link.active {
+    color: #d97706;
+}
+
+.dark .nav-link.active {
+    color: #fbbf24;
+}
+
+/* 按钮点击效果 */
+button:active {
+    transform: scale(0.98);
+}
+
+/* 卡片阴影层级 */
+.shadow-card {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.shadow-card-hover:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* 渐变背景 */
+.bg-gradient-wood {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%);
+}
+
+/* 木纹纹理效果 */
+.texture-wood {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v1H0zM0 20h100v0.5H0zM0 40h100v0.5H0zM0 60h100v0.5H0zM0 80h100v0.5H0z' fill='%23d97706' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* 产品价格高亮 */
+.price-highlight {
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 表单提交按钮动画 */
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+button[type="submit"]:active::after {
+    width: 200px;
+    height: 200px;
+}
+
+/* 星级评分 */
+.star-rating {
+    color: #fbbf24;
+}
+
+/* 语言切换按钮 */
+#langBtn {
+    min-width: 60px;
+}
+
+/* 主题切换按钮 */
+#themeBtn {
+    transition: transform 0.3s ease;
+}
+
+#themeBtn:hover {
+    transform: rotate(180deg);
+}
+
+/* 页脚链接悬停效果 */
+footer a {
+    transition: color 0.2s ease;
+}
+
+/* 加载动画 */
+.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loading.loaded {
+    opacity: 1;
+}
+
+/* 图片加载占位符 */
+.image-placeholder {
+    background: linear-gradient(135deg, #f5f5f4 0%, #e7e5e4 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* 响应式字体大小 */
+@media (max-width: 640px) {
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+    .text-3xl {
+        font-size: 1.75rem;
+    }
+    .text-4xl {
+        font-size: 2rem;
+    }
+}
+
+/* 联系方式卡片 */
+.contact-card {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+}
+
+/* 证书展示 */
+.certificate-badge {
+    border: 1px solid rgba(217, 119, 6, 0.3);
+    background: rgba(251, 191, 36, 0.05);
+}
+
+/* 产品规格标签 */
+.spec-label {
+    background: rgba(217, 119, 6, 0.1);
+    color: #92400e;
+}
+
+.dark .spec-label {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+}
+
+/* 产品详情页图片切换 */
+#mainProductImage {
+    transition: opacity 0.3s ease;
+}
+
+/* 滚动时导航栏变化 */
+.scrolled {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/* 桌面端优化 */
+@media (min-width: 1024px) {
+    .hide-desktop {
+        display: none;
+    }
+}
